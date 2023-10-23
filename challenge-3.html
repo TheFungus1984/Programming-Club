@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <p id = "p1">A stranger walks towards you and waves hello.</p>
+        <button onclick = "Correct()" id = "b1">Option 1: Stone</button>
+        <button onclick = "Incorrect()" id = "b2">Option 2: Talk</button>
+        <script>
+            function Correct(){
+                gitGot = document.getElementById("p1")
+                gitGot.innerHTML = "Correct!  You throw a stone at the man and gain 10 exp"
+                gone = document.getElementById("b2")
+                gone.remove()
+            }
+            function Incorrect(){
+                die = document.getElementById("p1")
+                die.innerHTML = "Incorrect."
+                no = document.getElementById("b1")
+                no.remove()
+                fall = document.createElement("img")
+                fall.setAttribute("src", "https://static.wikia.nocookie.net/villains/images/1/17/SmileDog2ndHD.jpg/revision/latest?cb=20180204165734")
+                document.body.appendChild(fall)
+                cry = true
+                youareanidiot = function wannaCry(){
+                    while(cry == true){
+                    console.log("no")
+                }
+                }
+                setTimeout(youareanidiot, 3000)
+            }
+
+        </script>
+    </body>
+</html>
