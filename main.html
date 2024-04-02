@@ -1,0 +1,69 @@
+<head>
+</head>
+<body id = "background">
+
+    <form>
+        Weight(Pounds): <input type = "text" id = "weight" name = "weightBox" value = "0"><br>
+        Height(Inches): <input type = "text" id = "height" name = "heightBox" value = "0"><br>
+    </form>
+    <button id = "click" onclick = "getValues()">Submit</button>
+    <p id = "bmi-result"></p> 
+    <button id = "fun-mode" hidden onclick = "funMode()">Wanna Have Some Fun?</button>
+    <image id = enemy></image>
+    <script>
+        let BMI;
+        let height;
+        let weight;
+        const enemy = document.getElementById("enemy");
+        const funModeActivate = document.getElementById("fun-mode");
+        const background = document.getElementById("background")
+        function getValues(){
+            const height = document.getElementById("height").value;
+            const weight = document.getElementById("weight").value;
+            const BMI = Math.round((weight/2.205)/((height*2.54/100)**2));
+            const BMIResult = document.getElementById("bmi-result");
+            if(BMI <= 5){
+                BMIResult.innerHTML = "Clack Clack Clack";
+                funModeActivate.hidden = false;
+                enemy.setAttribute("src", "https://i0.wp.com/moscadesign.com/wp-content/uploads/2023/05/73.jpg?fit=600%2C600&ssl=1")
+
+            };
+            if(BMI > 5 && BMI < 10){
+                BMIResult.innerHTML = "Eat a donut";
+                funModeActivate.hidden = false;
+                enemy.setAttribute("src", "https://qph.cf2.quoracdn.net/main-qimg-740009f5e93c78ea3afdffa2ab2fbe70-lq");
+
+            };
+            if(BMI >= 10 && BMI < 20){
+                BMIResult.innerHTML = "boooooorrrrriiinnnngg";
+                funModeActivate.hidden = false;
+                enemy.setAttribute("src", "https://www.techexplorist.com/wp-content/uploads/2022/03/bored-person.jpg");
+
+            };
+            if(BMI >= 20 && BMI < 25){
+                BMIResult.innerHTML = "Eat a salad";
+                funModeActivate.hidden = false;
+                enemy.setAttribute("src", "https://people.com/thmb/ni14YKPlzSu1YpMaI7g4XhJzfUg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(749x0:751x2)/brendan-fraser-sadie-sink-the-whale-121422-1-21bc6c7420514a3c9672bd1fc0aa65c7.jpg");
+
+            };
+            if(BMI >= 25 && BMI < 30 ){
+                 BMIResult.innerHTML = "Thar she blows!";
+                 funModeActivate.hidden = false;
+                 enemy.setAttribute("src", "https://deadline.com/wp-content/uploads/2023/02/Fraser-Tthe-whale.jpg");
+
+            };
+            if(BMI >= 30){
+                BMIResult.innerHTML = "HOW ARE YOU ALIVE????";
+                funModeActivate.hidden = false;
+                enemy.setAttribute("src", "https://people.com/thmb/LrZ3oJT6TiJF6WC7142b4sWRpFY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(824x315:826x317)/tammy-1000lb-sisters-e9c372c51188432bb7d9be58b0259315.jpg");
+
+            };
+        };
+        function funMode(){
+            background.style.backgroundImage = "url('https://steamuserimages-a.akamaihd.net/ugc/1026202797501505268/CDE29A465231A9E6FB19FF0DAC72B05A014B580A/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false')"
+            
+        }
+
+        
+    </script>
+</body>
