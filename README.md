@@ -1,6 +1,1 @@
-layout: page
-title: "Programming Club"
-permalink: /test1
-
-
-Slatt
+This is the programming club's current code repository 
