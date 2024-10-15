@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<body>
+<p>hi</p>
+<button id = "b1" onclick = "buttonpress()">click here for bob</button>
+    <script>
+        console.log("hi")
+        const bob = document.createElement("img");
+        const bob2 = document.createElement("plaintext");
+        let clicks = 0;
+        function buttonpress(){
+            if (clicks < 10){;
+            bob.setAttribute('src', 'https://static.wikia.nocookie.net/btb/images/6/6d/BobSavestheHedgehogs113.png/revision/latest?cb=20230125150319');
+            document.body.appendChild(bob);
+            clicks = clicks+1
+            console.log(clicks);
+            } 
+            else{
+                console.log("stop clicking");
+                bob2.setAttribute('src', "stop clicking");
+                document.body.appendChild(bob2);
+            }
+        }
+        
+        </script>
+</body>
