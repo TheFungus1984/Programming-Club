@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html>
-<body>
+    <style>
+        .relative {
+            position: relative;
+            bottom: 15px;
+            border: 3px solid rgb(66, 133, 244);
+            height: 20px;
+            width: 170px;
+        }
+        .relative2{
+            position: relative;
+            bottom: 25px;
+            /* border: 3px solid #73AD21; */
+        }
+        .button{
+            position: absolute;
+            top: 125px;
 
+        }
+    </style>
+<body>
+<button id = "b2" onlclick="buttonpress2()">console.log</button>
 <p>What is your name? (First and last)</p>
-<textarea></textarea>
-<p>What is your email address?</p>
-<textarea></textarea>
+
+<div class="relative">
+<textarea rows="1" placeholder="Name" id="Name"></textarea>
+</div>
+
+<div class="relative2">
+    <p>What is your email address?</p>
+        <div class="relative">
+        <textarea rows="1" placeholder="Email" id="Email"></textarea>
+        </div>
+</div>
+
+<button id = "b1" class="button" onclick="buttonpress()">save</button>
+
+<script>
+    let Namelist = [];
+    let Emaillist = [];
+    function buttonpress2(){
+        console.log(Namelist);
+        console.log(Emaillist)
+    }
+    function buttonpress(){
+        let text1 = document.getElementById("Name").value;
+        console.log(text1);
+        let text2 = document.getElementById("Email").value;
+        console.log(text2)
+        Namelist.push(text1);
+        Emaillist.push(text2);
+    }
+</script>
 
 </body>
 </html>
