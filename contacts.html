@@ -15,12 +15,12 @@
         }
         .button{
             position: absolute;
-            top: 125px;
+            top: 120px;
 
         }
     </style>
 <body>
-<button id = "b2" onlclick="buttonpress2()">console.log</button>
+
 <p>What is your name? (First and last)</p>
 
 <div class="relative">
@@ -39,17 +39,21 @@
 <script>
     let Namelist = [];
     let Emaillist = [];
-    function buttonpress2(){
+    /*function buttonpress2(){ 
         console.log(Namelist);
-        console.log(Emaillist)
+        console.log(Emaillist);
     }
+<button id = "b2" onlclick="buttonpress2()">console.log</button> (move to body)
+    */
     function buttonpress(){
         let text1 = document.getElementById("Name").value;
-        console.log(text1);
         let text2 = document.getElementById("Email").value;
-        console.log(text2)
         Namelist.push(text1);
+        console.log(Namelist)
+        console.log(text1);
         Emaillist.push(text2);
+        console.log(Emaillist);
+        console.log(text2);
     }
 </script>
 
