@@ -14,8 +14,8 @@
             /* border: 3px solid #73AD21; */
         }
         .button{
-            position: absolute;
-            top: 120px;
+            position: relative;
+            bottom: 30px;
             color: blue;
             background-color: white;
             text-align: center;
@@ -32,10 +32,20 @@
         textarea{
             resize: none;
         }
+        .header{
+            padding:1px;
+            background-color:  rgb(66, 133, 244);
+            text-align: center;
+            font-size: 30px;
+        }
     </style>
 <body>
 
-<p>What is your name? (First and last)</p>
+<div class="header" class="contacts">
+    <h1>Contacts</h1>
+</div>
+
+<p class="contacts">What is your name? (First and last)</p>
 
 <div class="relative">
 <textarea rows="1" cols="35" resize="none" placeholder="Name" id="Name" class="contacts"></textarea>
@@ -49,6 +59,7 @@
 </div>
 
 <button id = "b1" class="button" onclick="buttonpress()" class="contacts">Save</button>
+<p class="contacts">Contact Alan Yang at alan_yang-2026@bedfordps.org if you have any questions</p>
 
 <script>
     let Namelist = [];
