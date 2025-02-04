@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body  class = "sitetheme">
+    <style>
+        .sitetheme{
+            font-family:Trebuchet MS, Helvetica, sans-serif;
+            background-color: rgb(66, 133, 244);
+            text-align: center;
+        }
+        .home{
+            display: visible;
+        }
+        .contact{
+            display: none;
+        }
+        .resources{
+            display: none;
+        }
+        
+        </style>
+    <h3>Navigation</h3>
+    <div class = "home">
+        <h1>Programming Club</h1>
+        <h2>About us:</h2>
+        <p>We are a Bedford High School club focused on the activity of coding.  Our directive is to teach more people how to program, and to collaborate and bring people together for larger projects.  </p>
+        <h2>Links</h1>
+        <a href = "https://github.com/TheFungus1984/Programming-Club">Github</a>
+    </div>
+    <div class = "contact">
+
+        </div>
+    <div class  = "members">
+        <form >
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="password"><br><br>
+            <input type="submit" value="Submit" onclick = "success()">
+          </form>
+    </div>
+    <div class = "resources">
+    <h1 >Resources Area:</h1>
+    <p  >JavaScript</p>
+    <a  href = "https://drive.google.com/drive/folders/1nhrIVuenhd8DNF7zvGJvgw3hEfpwN1qx?usp=sharing">Click here!</a>
+    <p >Python</p>
+    <a  href = "https://drive.google.com/drive/folders/1oER4SnwtEd5vKwVq3EWNyUFwDTLjKhkc?usp=sharing">Click here!</a>
+    <p >Machine Learning </p>
+    </div>
+    <div class = "navigation">
+        <button onclick = "changePage('resources', 'home')">Home</button>
+        <button  onclick = "changePage('home', 'Contacts')">Contact/Join</button>
+        <button  onclick = "changePage('home', 'resources')">Resources</button>
+        <button  onclick = "changePage('home', 'members')">Member's Area</button>
+    </div>
+
+  
+    <script>
+        function changePage(currentPage, nextPage){
+            killPage(currentPage);
+            generatePage(nextPage);
+        }
+        function generatePage(Name){
+            const elements = document.getElementsByName(Name)
+            for(i = 0; i < elements.length; i++){
+                elements[i].style.display = "visible";
+                console.log("here")
+            }
+        }
+        function killPage(Name){
+            const elements = document.getElementsByName(Name)
+            console.log(elements)
+            f = 0
+            while (f < elements.length){
+
+                // elements[0].parentNode.removeChild(elements[0])
+                elements[f].style.display = "none"
+                f++;
+            }
+        }
+    </script>
+
+</body>
