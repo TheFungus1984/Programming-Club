@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <style>
+        #functions{
+            position: relative;
+            color: blue;
+            text-align: center;
+            border-radius: 8px;
+            transition-duration: 0.4s;
+            cursor:pointer;
+            padding: 3px 5px;
+            
+        }
+        #textareas{
+            text-align: center;
+        }
+        #answer{
+            text-align: center;
+        }
+    </style>
+
+    <div id = "textareas">
+    <textarea rows="1" cols="35" id="input1"></textarea>
+    <textarea rows="1" cols="35" id="input2"></textarea>
+    </div>
+    
+    <div id = "functions">
+    <button onclick="buttonpress()">stuff</button>
+    <button onclick="buttonpress2()">+</button>
+    <button onclick="buttonpress3()">-</button>
+    <button onclick="buttonpress4()">*</button>
+    <button onclick="buttonpress5()">/</button>
+    <button onclick="buttonpress6()">^</button>
+    <button onclick="buttonpress7()">ln</button>
+    <button onclick="buttonpress8()">log</button>
+    <button onclick="buttonpress9()">sin(degrees)</button>
+    <button onclick="buttonpress10()">cos(degrees)</button>
+    <button onclick="buttonpress11()">tan(degrees)</button>
+    <button onclick="buttonpress12()">csc(degrees)</button>
+    <button onclick="buttonpress13()">sec(degrees)</button>
+    <button onclick="buttonpress14()">cot(degrees)</button>
+    </div>
+    
+    <p id = "answer"></p>
+    <script>
+        answer = document.getElementById("answer") ;
+        let result = null;
+        function buttonpress(){
+
+        let number = document.getElementById("input1").value;
+        let number2 = document.getElementById("input2").value;
+        let number3 = number.concat(number2);
+        console.log(number3);
+        let value = parseFloat(number3);
+        console.log(value + 2);
+        console.log(4+2);
+        }
+        
+        function buttonpress2(){
+            let number = document.getElementById("input1").value;
+            let number2 = document.getElementById("input2").value;
+            result = (parseFloat(number)+parseFloat(number2));
+            answer.innerHTML = result;
+        }
+       
+        function buttonpress3(){
+            let number = document.getElementById("input1").value;
+            let number2 = document.getElementById("input2").value;
+            result = (parseFloat(number)-parseFloat(number2));
+            answer.innerHTML = result;
+        }
+
+        function buttonpress4(){
+            let number = document.getElementById("input1").value;
+            let number2 = document.getElementById("input2").value;
+            result = (parseFloat(number)*parseFloat(number2));
+            answer.innerHTML = result;
+        }
+
+        function buttonpress5(){
+            let number = document.getElementById("input1").value;
+            let number2 = document.getElementById("input2").value;
+            result = (parseFloat(number)/parseFloat(number2));
+            answer.innerHTML = result;
+        }
+
+        function buttonpress6(){
+            let number = document.getElementById("input1").value;
+            let number2 = document.getElementById("input2").value;
+            result = (parseFloat(number)**parseFloat(number2));
+            answer.innerHTML = result;
+        }
+
+        function buttonpress7(){
+            let number = document.getElementById("input1").value;
+            let number2 = document.getElementById("input2").value;
+            result = Math.log(parseFloat(number));
+            answer.innerHTML = result;
+        }
+
+        function buttonpress8(){
+            let number = document.getElementById("input1").value;
+            let number2 = document.getElementById("input2").value;
+            result = Math.log(parseFloat(number2))/Math.log(parseFloat(number));
+            answer.innerHTML = result;
+        }
+
+        function buttonpress9(){
+            let number = document.getElementById("input1").value;
+            result = Math.sin(Math.PI/180*parseFloat(number));
+            answer.innerHTML = result;
+        }
+
+        function buttonpress10(){
+            let number = document.getElementById("input1").value;
+            result = Math.cos(Math.PI/180*parseFloat(number));
+            answer.innerHTML = result;
+        }
+
+        function buttonpress11(){
+            let number = document.getElementById("input1").value;
+            result = Math.tan(Math.PI/180*parseFloat(number));
+            answer.innerHTML = result;
+        }
+
+        function buttonpress12(){
+            let number = document.getElementById("input1").value;
+            result = 1/Math.sin(Math.PI/180*parseFloat(number));
+            answer.innerHTML = result;
+        }
+
+        function buttonpress13(){
+            let number = document.getElementById("input1").value;
+            result = 1/Math.cos(Math.PI/180*parseFloat(number));
+            answer.innterHTML = result;
+        }
+
+        function buttonpress14(){
+            let number = document.getElementById("input1").value;
+            result = 1/Math.tan(Math.PI/180*parseFloat(number));
+            answer.innterHTML = result;
+        }
+    </script>
+</body>
+</html>
